@@ -3,3 +3,8 @@ Diferentes linguagens e campos do conhecimento podem ter definições diferentes
 
 **Então?**
 Para nós, tuplas são estruturas de dados que guardam informações. Simples, não é?
+
+## Listas X Tuplas
+Tanto em Haskell quanto em Python — serão nossos dois principais materiais de estudo —, tuplas e listas possuem muitas semelhanças. No entanto, uma única diferença as torna muito diferentes na prática. 
+Dentro de uma lista, em Python, por exemplo, podemos ler elementos, inserir ou excluir novos e até modificá-los. 
+```umaLista.insert(indice, elemento)``` -> insere um elemento à lista "umaLista" no indice escolhido.

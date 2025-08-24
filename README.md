@@ -15,3 +15,12 @@ umaLista.remove(elemento) -> remove um elemento da lista, retornando erro caso o
 Apesar de existirem muitas outras funções relacionadas às listas, elas não são nosso foco aqui. Por enquanto, desejamos apenas entender que toda a versatilidade das listas que já conhecemos não fazem sentido para as tuplas. O detalhe que altera a função de uma estrutura para outra é a **mutabilidade**. Ou melhor, a falta dela.
 
 ### Imutabilidade
+A única forma de inserir elementos dentro de uma tupla é no momento de sua declaração. Uma tupla existe para ser lida, não para ter seus dados manipulados, e isso altera completamente a mecânica de seu uso. Além disso, por ser uma estrutura estática, não dinâmica, a tupla é recomendada pra uso heterogêneo de dados, ou seja, inserir tipos diferentes dentro da mesma estrutura.
+Seguem abaixo alguns exemplos de tuplas:
+```
+(True, 123, "123")
+('1', '2', '3', 321)
+(Falso, Falso, "Falso")
+Obs: Repare na diferença de dados sendo inseridos dentro do mesmo conjunto. Em Haskell, isso é crucial.
+```
+## Uso de Tuplas

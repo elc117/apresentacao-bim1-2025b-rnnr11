@@ -7,10 +7,11 @@ Para nós, tuplas são estruturas de dados que guardam informações. Simples, n
 ## Listas X Tuplas
 Tanto em Haskell quanto em Python — serão nossos dois principais materiais de estudo —, tuplas e listas possuem muitas semelhanças. No entanto, uma única diferença as torna muito diferentes na prática. 
 Dentro de uma lista, em Python, por exemplo, podemos ler elementos, inserir ou excluir novos e até modificá-los. Por exemplo:
-
 ```
 umaLista.insert(indice, elemento) -> insere um elemento à lista "umaLista" no indice escolhido.
 
 umaLista.remove(elemento) -> remove um elemento da lista, retornando erro caso o elemento não exista.
 ```
-Apesar de existirem muitas outras funções relacionadas às listas, elas não são nosso foco aqui. Por enquanto, desejamos 
+Apesar de existirem muitas outras funções relacionadas às listas, elas não são nosso foco aqui. Por enquanto, desejamos apenas entender que toda a versatilidade das listas que já conhecemos não fazem sentido para as tuplas. O detalhe que altera a função de uma estrutura para outra é a **mutabilidade**. Ou melhor, a falta dela.
+
+### Imutabilidade

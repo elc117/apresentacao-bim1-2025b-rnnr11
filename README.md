@@ -15,7 +15,7 @@ umaLista.remove(elemento) -> remove um elemento da lista, retornando erro caso o
 Apesar de existirem muitas outras funções relacionadas às listas, elas não são nosso foco aqui. Por enquanto, desejamos apenas entender que toda a versatilidade das listas que já conhecemos não fazem sentido para as tuplas. Dentro do Python, o detalhe que altera a função de uma estrutura para outra é a **mutabilidade**. Ou melhor, a falta dela.
 
 ### Imutabilidade
-A única forma de inserir elementos dentro de uma tupla é no momento de sua declaração. Uma tupla existe para ser lida, não para ter seus dados manipulados, e isso altera completamente a mecânica de seu uso. Além disso, por ser uma estrutura estática, não dinâmica, a tupla é recomendada pra uso heterogêneo de dados, ou seja, inserir tipos diferentes dentro da mesma estrutura. Essa imutabilidade é diferente para o Haskell, mas abordaremos mais a frente.
+A única forma de inserir elementos dentro de uma tupla é no momento de sua declaração. Uma tupla existe para ser lida, não para ter seus dados manipulados, e isso altera completamente a mecânica de seu uso. Além disso, por ser uma estrutura estática, não dinâmica, a tupla é recomendada pra uso heterogêneo de dados, ou seja, inserir tipos diferentes dentro da mesma estrutura. Essa imutabilidade é diferente para o Haskell, mas abordaremos mais a frente. Além disso, também devemos lembrar que, para termos uma tupla, não podemos ter menos de dois dados no conjunto, diferente das listas que até vazias podem existir.
 Seguem abaixo alguns exemplos de tuplas:
 ```
 (True, 123, "123")
@@ -42,6 +42,37 @@ TypeError: 'tuple' object does not support item assignment
 ## Uso de Tuplas em Haskell
 No entanto, a mecânica das tuplas em Haskell é diferente do Python. Aqui, as listas também são imutáveis, e a alteração de seus dados exige a criação de uma nova lista. Nesse caso, a função das tuplas muda um pouco.
 
+### Sintaxe da Tupla
+As tuplas são declaradas em Haskell entre parenteses, sendo que todos os seus elementos são separados internamente por vírgulas.
+```
+ghci> umaTupla = (10, 20, "30", '4', '0') -- isso é uma tupla sendo declarada
+```
+Apesar de tudo, acessar tuplas não é nada prático, exceto quando falamos de seus primeiros e segundos elementos. Haskell já tem as funções fst e snd que utilizamos para acessar o primeiro e o segundo elemento. Por exemplo:
+```
+ghci> pair = (1, 2)
+ghci> pair
+(1, 2)
+ghci> fst pair
+1
+ghci> snd pair
+2
+```
+No entanto, caso desejemos acessar elementos do terceiro em diante, é necessário que criemos nossas próprias funções para fazer a leitura. Além disso, também é válido lembrar que tuplas podem ser inseridas uma dentro da outra, assim como dentro de listas.
+```
+ghci> tup = (("aqui", "dentro",), "aqui fora")
+ghci> lst = [(1, 2), (3, 4), (5, 6)]
+```
+Por fim, temos a função curry e uncurry. Essa função transforma uma função em uma que seja "curried", ou seja, muda uma função que receba como parâmetro uma tupla para uma que recebe dois elementos. Por exemplo:
+```
+ghci> curry fst "aqui" "dentro" -- fst recebe uma tupla como parâmetro, então essa construção com seus elementos separados não deveria ser possível
+"aqui"
+ghci> funcao x y = x+y
+ghci> funcao 1 2
+3
+ghci> uncurry funcao (1, 2) -- funcao é uma função "curried", então não deveria funcionar com uma tupla.
+3
+```
+
 ### Estrutura Heterogênea
 Diferente do Python, em que é **recomendável** que listas tenham o mesmo tipo de dados, no Haskell, isso é uma exigência. Como listas são homogeneas na linguagem, a principal utilidade de uma tupla é a estruturação heterogênea de dados, ou seja, unir dados com tipos diferentes sem a necessidade de criar novas estruturas (structs).
 ```
@@ -52,3 +83,4 @@ fuzzObjectR trm = do
   pure $ RequiredFieldAccess P.emptySpan (Object P.emptySpan $ Compat.fromList $ pairs <> [(key, trm)]) (Left key)
 ```
 No exemplo acima, temos uma função que gera objetos JSON aleatórios para o teste de alguma função que irá os processar. Na quarta linha, a função utiliza outra função, a "arbitrary" para gerar valores aleatórios para uma lista de pares. A forma que o desenvolver encontrou para listar esses pares foi uma lista de tupla. Ao invés de criar uma estrutura para poder conter esses pares, foi necessário apenas o uso de uma tupla.
+# Testando Tuplas

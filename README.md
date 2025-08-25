@@ -51,3 +51,4 @@ fuzzObjectR trm = do
   pairs <- arbitrary @[(T.Text, ValueExt)]
   pure $ RequiredFieldAccess P.emptySpan (Object P.emptySpan $ Compat.fromList $ pairs <> [(key, trm)]) (Left key)
 ```
+No exemplo acima, temos uma função que gera objetos JSON aleatórios para o teste de alguma função que irá os processar. Na quarta linha, a função utiliza outra função, a "arbitrary" para gerar valores aleatórios para uma lista de pares. A forma que o desenvolver encontrou para listar esses pares foi uma lista de tupla. Ao invés de criar uma estrutura para poder conter esses pares, foi necessário apenas o uso de uma tupla.

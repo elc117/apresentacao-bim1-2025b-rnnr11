@@ -44,3 +44,10 @@ No entanto, a mecânica das tuplas em Haskell é diferente do Python. Aqui, as l
 
 ### Estrutura Heterogênea
 Diferente do Python, em que é **recomendável** que listas tenham o mesmo tipo de dados, no Haskell, isso é uma exigência. Como listas são homogeneas na linguagem, a principal utilidade de uma tupla é a estruturação heterogênea de dados, ou seja, unir dados com tipos diferentes sem a necessidade de criar novas estruturas (structs).
+```
+fuzzObjectR :: ValueExt -> Gen ValueExt
+fuzzObjectR trm = do
+  key <- arbitrary
+  pairs <- arbitrary @[(T.Text, ValueExt)]
+  pure $ RequiredFieldAccess P.emptySpan (Object P.emptySpan $ Compat.fromList $ pairs <> [(key, trm)]) (Left key)
+```

@@ -86,8 +86,10 @@ No exemplo acima, temos uma função que gera objetos JSON aleatórios para o te
 # Testando Tuplas
 No exemplo abaixo, a função calcula o faturamento de um certo produto de maneira simples, mas utilizamos a função curry para passar argumentos fora da estrutura de tupla.
 ![Primeiro Exemplo](https://github.com/elc117/apresentacao-bim1-2025b-rnnr11/blob/main/primeiro%20exemplo.gif)
+
 Uma das possíveis funções da tupla é retornar mais de um dado de uma função. No caso abaixo, calcCirculo recebe o raio de um círculo e retorna o diâmetro e a área dentro de uma tupla.
 ![Segundo Exemplo](https://github.com/elc117/apresentacao-bim1-2025b-rnnr11/blob/main/segundo%20exemplo.gif)
+
 Como as funções fst e snd são restritas a pares, temos um exemplo abaixo de como criar as suas próprias funções de retorno de valores da tupla
 ![Terceiro Exemplo](https://github.com/elc117/apresentacao-bim1-2025b-rnnr11/blob/main/terceiro%20exemplo.gif)
 # Fontes

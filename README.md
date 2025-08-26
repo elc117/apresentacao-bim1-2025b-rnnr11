@@ -47,7 +47,7 @@ As tuplas são declaradas em Haskell entre parenteses, sendo que todos os seus e
 ```
 ghci> umaTupla = (10, 20, "30", '4', '0') -- isso é uma tupla sendo declarada
 ```
-Apesar de tudo, acessar tuplas não é nada prático, exceto quando falamos de seus primeiros e segundos elementos. Haskell já tem as funções fst e snd que utilizamos para acessar o primeiro e o segundo elemento. Por exemplo:
+Apesar de tudo, acessar tuplas não é nada prático, exceto quando falamos de seus primeiros e segundos elementos. Haskell já tem as funções fst e snd que utilizamos para acessar o primeiro e o segundo elemento. Vale lembrar que essas funções só são aplicáveis a pares. Por exemplo:
 ```
 ghci> pair = (1, 2)
 ghci> pair
@@ -84,8 +84,18 @@ fuzzObjectR trm = do
 ```
 No exemplo acima, temos uma função que gera objetos JSON aleatórios para o teste de alguma função que irá os processar. Na quarta linha, a função utiliza outra função, a "arbitrary" para gerar valores aleatórios para uma lista de pares. A forma que o desenvolver encontrou para listar esses pares foi uma lista de tupla. Ao invés de criar uma estrutura para poder conter esses pares, foi necessário apenas o uso de uma tupla.
 # Testando Tuplas
+No exemplo abaixo, a função calcula o faturamento de um certo produto de maneira simples, mas utilizamos a função curry para passar argumentos fora da estrutura de tupla.
 ![Primeiro Exemplo](https://github.com/elc117/apresentacao-bim1-2025b-rnnr11/blob/main/primeiro%20exemplo.gif)
-
+Uma das possíveis funções da tupla é retornar mais de um dado de uma função. No caso abaixo, calcCirculo recebe o raio de um círculo e retorna o diâmetro e a área dentro de uma tupla.
 ![Segundo Exemplo](https://github.com/elc117/apresentacao-bim1-2025b-rnnr11/blob/main/segundo%20exemplo.gif)
-
+Como as funções fst e snd são restritas a pares, temos um exemplo abaixo de como criar as suas próprias funções de retorno de valores da tupla
 ![Terceiro Exemplo](https://github.com/elc117/apresentacao-bim1-2025b-rnnr11/blob/main/terceiro%20exemplo.gif)
+# Fontes
+EDUCBA. _Haskell Tuple_. Disponível em: https://www.educba.com/haskell-tuple/. Acesso em: 25 ago. 2025.
+HASURA. Kriti-lang: Spec.hs. Disponível em: https://github.com/hasura/kriti-lang/blob/main/test/Spec.hs. Acesso em: 25 ago. 2025.
+ROMILDO, José. _P06 - Polimorfismo_. Disponível em: http://www.decom.ufop.br/romildo/2014-1/bcc222/practices/p06-polimorfismo.pdf. Acesso em: 25 ago. 2025.
+HASHTAG TREINAMENTOS. _Tuplas no Python_: Estrutura de Dados Versátil. Disponível em: https://www.hashtagtreinamentos.com/tuplas-no-python. Acesso em: 25 ago. 2025.
+ALURA. _Dúvida: O que é Tuplas?_. Disponível em: https://cursos.alura.com.br/forum/topico-duvida-o-que-e-tuplas-303155. Acesso em: 25 ago. 2025.
+WIKIBOOKS. _Haskell/Lists and Tuples_. Disponível em: https://en.wikibooks.org/wiki/Haskell/Lists_and_tuples. Acesso em: 25 ago. 2025.
+PYTHON SOFTWARE FOUNDATION. _Tutorial de Estruturas de Dados: Tuplas e Sequências_. Disponível em: https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences. Acesso em: 25 ago. 2025.
+ASIMOV ACADEMY. _Tuplas em Python_. Disponível em: https://hub.asimov.academy/tutorial/tuplas-em-python/. Acesso em: 25 ago. 2025.

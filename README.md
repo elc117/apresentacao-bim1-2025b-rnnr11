@@ -87,3 +87,5 @@ No exemplo acima, temos uma função que gera objetos JSON aleatórios para o te
 ![Primeiro Exemplo](https://github.com/elc117/apresentacao-bim1-2025b-rnnr11/blob/main/primeiro%20exemplo.gif)
 
 ![Segundo Exemplo](https://github.com/elc117/apresentacao-bim1-2025b-rnnr11/blob/main/segundo%20exemplo.gif)
+
+![Terceiro Exemplo](http://github.com/elc117/apresentacao-bim1-2025b-rnnr11/blob/main/terceiro%20exemplo.gif)

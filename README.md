@@ -92,10 +92,17 @@ Como as funções fst e snd são restritas a pares, temos um exemplo abaixo de c
 ![Terceiro Exemplo](https://github.com/elc117/apresentacao-bim1-2025b-rnnr11/blob/main/terceiro%20exemplo.gif)
 # Fontes
 EDUCBA. _Haskell Tuple_. Disponível em: https://www.educba.com/haskell-tuple/. Acesso em: 25 ago. 2025.
+
 HASURA. Kriti-lang: Spec.hs. Disponível em: https://github.com/hasura/kriti-lang/blob/main/test/Spec.hs. Acesso em: 25 ago. 2025.
+
 ROMILDO, José. _P06 - Polimorfismo_. Disponível em: http://www.decom.ufop.br/romildo/2014-1/bcc222/practices/p06-polimorfismo.pdf. Acesso em: 25 ago. 2025.
+
 HASHTAG TREINAMENTOS. _Tuplas no Python_: Estrutura de Dados Versátil. Disponível em: https://www.hashtagtreinamentos.com/tuplas-no-python. Acesso em: 25 ago. 2025.
+
 ALURA. _Dúvida: O que é Tuplas?_. Disponível em: https://cursos.alura.com.br/forum/topico-duvida-o-que-e-tuplas-303155. Acesso em: 25 ago. 2025.
+
 WIKIBOOKS. _Haskell/Lists and Tuples_. Disponível em: https://en.wikibooks.org/wiki/Haskell/Lists_and_tuples. Acesso em: 25 ago. 2025.
+
 PYTHON SOFTWARE FOUNDATION. _Tutorial de Estruturas de Dados: Tuplas e Sequências_. Disponível em: https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences. Acesso em: 25 ago. 2025.
+
 ASIMOV ACADEMY. _Tuplas em Python_. Disponível em: https://hub.asimov.academy/tutorial/tuplas-em-python/. Acesso em: 25 ago. 2025.
